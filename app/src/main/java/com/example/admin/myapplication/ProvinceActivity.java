@@ -65,7 +65,7 @@ public class ProvinceActivity extends AppCompatActivity {
     }
 
         private void getData(final ArrayAdapter<String> adapter){
-        String weatherUrl=currentlevel==PROVINCE?"http://guolin.tech/api/china/":(currentlevel==CITY?"http://guolin.tech/api/china"+provinceId:"http://guolin.tech/api/china/"+provinceId+"/"+cityId);
+        String weatherUrl=currentlevel==PROVINCE?"http://guolin.tech/api/china/":(currentlevel==CITY?"http://guolin.tech/api/china/"+provinceId:"http://guolin.tech/api/china/"+provinceId+"/"+cityId);
         HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
